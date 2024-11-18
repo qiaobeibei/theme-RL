@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <!-- 头部模块 -->
+    <div class="header">
+        <div class="title">
+          <span>卫星集群博弈场景选择界面</span>
+        </div>
+        <div class="time">
+          <span id="system-time">加载中...</span>
+        </div>
+        <div class="company">
+          <span>西北工业大学</span>
+          <!-- <span>自动化学院</span> -->
+        </div>
+      </div>
+      
+      <script>
+        // 更新系统时间的函数
+        function updateSystemTime() {
+          const timeElement = document.getElementById("system-time");
+          const now = new Date();
+      
+          // 格式化日期为 YYYY年MM月DD日
+          const formattedDate = now.toLocaleDateString('zh-CN', {
+            year: 'numeric',
+            month: '2-digit',
+            day: '2-digit',
+          });
+      
+          // 格式化时间为 HH:mm:ss
+          const formattedTime = now.toLocaleTimeString('zh-CN', {
+            hour: '2-digit',
+            minute: '2-digit',
+            second: '2-digit',
+          });
+          // 更新页面中的日期和时间
+          timeElement.textContent = `${formattedDate} ${formattedTime}`;
+        }
+        // 每秒更新一次时间
+        setInterval(updateSystemTime, 1000);
+        // 页面加载时立即显示当前时间
+        updateSystemTime();
+      </script>
+      
+
+    <!-- 主题模块 -->
+    <div class="main">
+        <div class="animate">
+            <!-- 浮动层 -->
+            <div class="float">
+                <div class="floating1">
+                    <div id="roate1">
+                        <div class="roate-item">
+                            <!-- <p>12356</p>
+                            <span>销售额</span> -->
+                        </div>
+                        <div class="roate-item">
+                            <!-- <p>53%</p>
+                            <span>同比</span> -->
+                        </div>
+                        <div class="roate-item">
+                            <a href="env1.html" class="env submit" style="display: inline-block; padding: 20px 20px;">模拟</a>
+                            <span>xvsx场景</span>
+                        </div>
+                    </div>
+                    <p class="pm">NO.5</p>
+                </div>
+                <div class="floating2">
+                    <div id="roate2">
+                        <div class="roate-item2">
+                            <!-- <p>12356</p>
+                            <span>销售额</span> -->
+                        </div>
+                        <div class="roate-item2">
+                            <!-- <p>53%</p>
+                            <span>同比</span> -->
+                        </div>
+                        <div class="roate-item2">
+                            <a href="env2.html" class="env submit" style="display: inline-block; padding: 20px 20px;">模拟</a>
+                            <span>xvsx场景</span>
+                        </div>
+                    </div>
+                    <p class="pm2">NO.4</p>
+                </div>
+                <div class="floating3">
+                    <div id="roate3">
+                        <div class="roate-item3">
+                            <!-- <p>12356</p>
+                            <span>销售额</span> -->
+                        </div>
+                        <div class="roate-item3">
+                            <!-- <p>53%</p>
+                            <span>同比</span> -->
+                        </div>
+                        <div class="roate-item3">
+                            <a href="env3.html" class="env submit" style="display: inline-block; padding: 20px 20px;">模拟</a>
+                            <span>xvsx场景</span>
+                        </div>
+                    </div>
+                    <p class="pm3">NO.3</p>
+                </div>
+                <div class="floating4">
+                    <div id="roate4">
+                        <div class="roate-item4">
+                            <!-- <p>12356</p>
+                            <span>销售额</span> -->
+                        </div>
+                        <div class="roate-item4">
+                            <!-- <p>53%</p>
+                            <span>同比</span> -->
+                        </div>
+                        <div class="roate-item4">
+                            <a href="env4.html" class="env submit" style="display: inline-block; padding: 20px 20px;">模拟</a>
+                            <span>xvsx场景</span>
+                        </div>
+                    </div>
+                    <p class="pm4">NO.2</p>
+                </div>
+                <div class="floating5">
+                    <div id="roate5">
+                        <div class="roate-item5">
+                            <!-- <p>12356</p>
+                            <span>销售额</span> -->
+                        </div>
+                        <div class="roate-item5">
+                            <!-- <p>53%</p>
+                            <span>同比</span> -->
+                        </div>
+                        <div class="roate-item5">
+                            <a href="env5.html" class="env submit" style="display: inline-block; padding: 20px 20px;">模拟</a>
+                            <span>xvsx场景</span>
+                        </div>
+                    </div>
+                    <p class="pm5">NO.1</p>
+                </div>
+            </div>
+            <div class="sum">
+                <div class="data">
+                    <!-- <p>作战场景选择</p> -->
+                    <span>博弈场景选择</span>
+                </div>
+                <div class="cicle1"></div>
+                <canvas id="canvas1"></canvas>
+                <canvas id="canvas2"></canvas>
+                <div class="data1">
+                    <div class="qiu">
+                        <p>回放</p>
+                    </div>
+                    <!-- <span>折扣率</span> -->
+                </div>
+                <div class="data2">
+                    <div class="qiu">
+                        <p>模型库</p>
+                    </div>
+                    <!-- <span>xxx</span> -->
+                </div>
+                <div class="data3">
+                    <div class="qiu">
+                        <p>武器库</p>
+                    </div>
+                    <!-- <span>完成率</span> -->
+                </div>
+                <div class="data4">
+                    <div class="qiu">
+                        <p>卫星库</p>
+                    </div>
+                    <!-- <span>同比</span> -->
+                </div>
+            </div>
+        </div>
+
+        <div class="charts">
+            <div class="charts1">
+                <div class="charts-title">
+                    <span>围捕场景卫星参数设定</span>
+                </div>
+                <div class="charts-content1 content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>卫星</td>
+                                <td>装备</td>
+                                <td>a</td>
+                                <td>e</td>
+                                <td>i</td>
+                                <td>Ω</td>
+                                <td>f</td>
+                                <td>燃料(kg)</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>白方星</td>
+                                <td>无</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td style="color: #f20606">0<span class="chart1"></span></td>
+                            </tr>
+                            <tr>
+                                <td style="color: red;">红方星</td>
+                                <td>捕网</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td style="color: #4bd8ba">150kg<span class="chart2"></span></td>
+                            </tr>
+                            <tr>
+                                <td style="color: rgb(0, 157, 254);">蓝方星</td>
+                                <td>激光</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td style="color: #4bd8ba">150kg<span class="chart3"></span></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="charts1">
+                <div class="charts-title">
+                    <span>BJ场景卫星参数设定</span>
+                </div>
+                <div class="charts-content1 content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>卫星</td>
+                                <td>装备</td>
+                                <td>a</td>
+                                <td>e</td>
+                                <td>i</td>
+                                <td>Ω</td>
+                                <td>f</td>
+                                <td>燃料(kg)</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>白方星</td>
+                                <td>无</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td style="color: #f20606">0<span class="chart1"></span></td>
+                            </tr>
+                            <tr>
+                                <td style="color: red;">红方星</td>
+                                <td>捕网</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td style="color: #4bd8ba">150kg<span class="chart2"></span></td>
+                            </tr>
+                            <tr>
+                                <td style="color: rgb(0, 157, 254);">蓝方星</td>
+                                <td>激光</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td style="color: #4bd8ba">150kg<span class="chart3"></span></td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="charts2">
+                <div class="charts-title">
+                    <span>TAD场景卫星参数设定</span>
+                </div>
+                <div class="charts-content2 content">
+                    <table>
+                        <thead>
+                            <tr>
+                                <td>卫星</td>
+                                <td>装备</td>
+                                <td>a</td>
+                                <td>e</td>
+                                <td>i</td>
+                                <td>Ω</td>
+                                <td>f</td>
+                                <td>燃料(kg)</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>白方星</td>
+                                <td>无</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td style="color: #f20606">0<span class="chart1"></span></td>
+                            </tr>
+                            <tr>
+                                <td style="color: red;">红方星</td>
+                                <td>捕网</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td style="color: #4bd8ba">150kg<span class="chart2"></span></td>
+                            </tr>
+                            <tr>
+                                <td style="color: rgb(0, 157, 254);">蓝方星</td>
+                                <td>激光</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td>xx</td>
+                                <td style="color: #4bd8ba">150kg<span class="chart3"></span></td>
+                            </tr>
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./js/jquery-1.11.0.min.js"></script>
+<script src="./js/echarts.min.js"></script>
+<script src="./js/main.js"></script>
+
+</html>
