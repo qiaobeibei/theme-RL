@@ -1,11 +1,11 @@
 登录界面：
 
-![image-20241118160302591](../../source/images/$%7Bfiilename%7D/image-20241118160302591.png)
+![image-20241118160302591](./images/1731917103696.jpg)
 
 场景选择界面：
 
-![image-20241118160327615](../../source/images/$%7Bfiilename%7D/image-20241118160327615.png)
+![image-20241118160327615](./images/1731917132975.jpg)
 
 数据展示界面：
 
-![image-20241118160341716](../../source/images/$%7Bfiilename%7D/image-20241118160341716.png)
+![image-20241118160341716](./images/1731917155152.jpg)
